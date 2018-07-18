@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "puppeteer": "^1.6.0",
+    "serve-handler": "^3.3.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  },
+  "main": "index.js",
+  "bin": "run.js"
+}
