@@ -8,5 +8,12 @@
     "mocha": "^5.2.0"
   },
   "main": "index.js",
-  "bin": "run.js"
+  "bin": "run.js",
+  "name": "mocha-headless-server",
+  "version": "0.1.0",
+  "description": "Run Mocha tests via headless browsers with HTTP server",
+  "repository": "git@github.com:samthor/mocha-headless-server.git",
+  "author": "Sam Thorogood <sam.thorogood@gmail.com>",
+  "license": "Apache-2.0",
+  "private": false
 }
