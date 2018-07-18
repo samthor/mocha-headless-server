@@ -30,9 +30,13 @@ function formatHost(addr) {
 }
 
 function runServer() {
+  const options = {
+    host: 'localhost',  // needed to force IPv4
+    port: 0,            // choose unused high port
+  };
   return new Promise((resolve, reject) => {
     const server = http.createServer(handler);  // TODO: handler serves cwd by default
-    server.listen(() => resolve(server));
+    server.listen(options, () => resolve(server));
     server.on('error', reject);
   });
 }
