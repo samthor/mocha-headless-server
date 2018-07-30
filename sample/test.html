@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<!--
+  Sample HTML test boilerplate. Copy `suite.js` and `test.html` to the top-level of your project,
+  as well as including 'mocha' and 'chai' as dependencies.
+-->
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="node_modules/mocha/mocha.css" />
+<script src="node_modules/mocha/mocha.js"></script>
+<script src="node_modules/chai/chai.js"></script>
+<script src="node_modules/mocha-headless-server/boilerplate.js"></script>
+<script>
+  var assert = chai.assert;
+  mocha.setup({ui: 'tdd'});
+</script>
+<script src="suite.js" type="module"></script>

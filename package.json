@@ -8,6 +8,9 @@
     "chai": "^4.1.2",
     "mocha": "^5.2.0"
   },
+  "peerDependencies": {
+    "mocha": "5.x"
+  },
   "main": "index.js",
   "bin": "run.js",
   "name": "mocha-headless-server",
