@@ -17,8 +17,7 @@
 'use strict';
 
 const puppeteer = require('puppeteer');
-const childProcess = require('child_process');
-const handler = require('serve-handler');
+const dhost = require('dhost');
 const http = require('http');
 const util = require('util');
 
@@ -35,8 +34,18 @@ function runServer() {
     port: 0,            // choose unused high port
   };
   return new Promise((resolve, reject) => {
-    const server = http.createServer(handler);  // TODO: handler serves cwd by default
+    const handler = dhost({
+      listing: false,
+    });
+    const server = http.createServer();
     server.listen(options, () => resolve(server));
+    server.on('request', (req, res) => {
+      handler(req, res, () => {
+        // next() is called so dhost didn't handle us, serve 404
+        res.writeHead(404);
+        res.end();
+      });
+    });
     server.on('error', reject);
   });
 }
@@ -152,7 +161,7 @@ module.exports = function({path, args=[], headless=true, log=false}) {
     await page.goto(url);
 
     // wait for and return test result global from page
-    const timeout = 60 * 1000;
+    const timeout = 20 * 1000;
     await page.waitForFunction(() => window.__mochaTest, {timeout});
     return await page.evaluate(() => window.__mochaTest);
   }
