@@ -144,10 +144,10 @@ deep-eql@^3.0.0:
   dependencies:
     type-detect "^4.0.0"
 
-dhost@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/dhost/-/dhost-0.1.4.tgz#4a20bcac381af4c30dc92600611664a3431f87e6"
-  integrity sha512-OHdRrl5e6QEQRYBs1yiEOnA7Nudy+lx6rfJcCWGdzy0FDMyRV5u4Ab7nJExkqtBwKyBNNwWUvevH4V7vK4Zhjg==
+dhost@^0.1.8:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/dhost/-/dhost-0.1.8.tgz#80baf4ce5930678e712e9e99ce3feefe048a1a0f"
+  integrity sha512-g8O2PFaB+iys5TyMov/ubnsXaXK8ILqX9yjpY3GD1dYBCB90R5ekJaceRZQONeZO6HohKENik7qNa3HmEK9x6Q==
   dependencies:
     bytes "^3.1.0"
     chalk "^2.4.2"
