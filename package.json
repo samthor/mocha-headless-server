@@ -1,15 +1,15 @@
 {
-  "version": "0.1.3",
-  "dependencies": {
-    "dhost": "^0.1.8",
-    "puppeteer": "^1.6.0"
-  },
+  "version": "0.1.4",
   "devDependencies": {
     "chai": "^4.1.2",
-    "mocha": "^5.2.0"
+    "mocha": "5.x",
+    "puppeteer": "2.x",
+    "dhost": "0.1.x"
   },
   "peerDependencies": {
-    "mocha": "5.x"
+    "mocha": "5.x",
+    "puppeteer": "2.x",
+    "dhost": "0.1.x"
   },
   "main": "index.js",
   "bin": "run.js",
