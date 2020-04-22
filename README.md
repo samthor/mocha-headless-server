@@ -1,3 +1,6 @@
+**You should use [headless-test](https://github.com/samthor/headless-test) instead of this.**
+There's nothing wrong with this package, but it's not as easy to use.
+
 Use to run Mocha tests via headless browsers (currently just Chrome) via a local HTTP server.
 
 Running a local HTTP server enables resources that require network access (e.g., JS module loading).
